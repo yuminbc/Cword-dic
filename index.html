@@ -9,69 +9,37 @@
 </head>
 <body>
     <!-- 검색창     -->
-    <div id="search-box">
-        <input id="search" type="text" value=""></input>
-        <input id="submit" type="submit" value="검색"></input>
+
+
+
+    <form name="Lee" method="get">
+        <div id="search-box">
+        
+                <select id= "keyword" name="keyword">
+                    <option value="r_word" >단어</option>
+                    <option value="r_des">설명</option>
+                    <option value="word_des">단어+설명</option>
+                </select>
+            
+            <input id="search" type="text" value=></input>
+            <input id="submit" type="submit" value="검색"></input>
+            <input id="allsubmit" type="button" onclick="location.href='home.html'" value="홈페이지"></input>
+
+        </div>
+    </form>
+    <div id="serend">
+
     </div>
 
+
     <!-- 사전 -->
-    <div id="container"></div>
+    <div class="back" >
+        <div id="container" style="background-image: url(123.PNG);">
 
-    <script>
-        const query = document.getElementById('search')
-        const submitBtn = document.getElementById('submit')
-        const BASE_URL = 'http://localhost:5000/api/words'
+        </div>
+    </div>
+    <script src="app.js">
 
-        // 서버 데이터 가져오기
-        function getData(baseUr1, query){
-            //fetch `$접속할 url
-            fetch(`${baseUr1}/${query}`, {
-                headers: {
-                    "Content-Type": "application/json",
-                }
-            })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data)
-                const {words} = data;
-                
-                const template = words.map(word =>{
-
-                    // if(isNaN(word.r_seq)){                       
-                    //     word.r_seq="" ;
-                    // }
-
-                    return(
-                        `
-                        <div class="item">
-                                <div class="word">
-                                    <pre><p><a href = "${word.r_link}" target="_blank">${word.r_word}</a> ${word.r_seq? word.r_seq:""}</p></pre>
-                                    <pre><a class="r_chi">${word.r_chi}</a><a class = "r_pos">${word.r_pos}</a></pre>
-                                </div>
-                                
-                                <p class="r_des">${word.r_des}</p>
-                        </div>
-                        `
-                    )
-                })
-                container.innerHTML = template.join("")// DOM에 template 삽입
-
-            })
-        }
-
-        submitBtn.addEventListener('click', function(){
-            console.log(query.value)
-            getData(BASE_URL, query.value)
-        })
-        query.addEventListener("keypress",function(e){
-            console.log("key pressed")
-            if(e.keyCode === 13){
-                getData(BASE_URL,query.value)
-            }
-        })
-        window.addEventListener('DoMCcontentLoaded',function(){
-            getData(BASE_URL)
-        })
     </script>
 </body>
 </html>
