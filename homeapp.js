@@ -85,7 +85,7 @@ function getData(baseUrl, query){
 
     })
 }
-
+ 
 submitBtn.addEventListener('click', function(){
     console.log(query.value)
     getData(BASE_URL, query.value)
