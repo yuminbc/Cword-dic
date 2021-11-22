@@ -84,7 +84,7 @@ function getData(baseUrl, query){
         serend.innerHTML="&quot;"+query+"&quot;의 검색결과는 "+words.length+"개 입니다."+"<hr>"
 
     })
-}
+} 
  
 submitBtn.addEventListener('click', function(){
     console.log(query.value)
