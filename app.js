@@ -2,7 +2,7 @@ const query = document.getElementById('search')
 const submitBtn = document.getElementById('submit')
 // const container = document.getElementById('container')
 // const BASE_URL = 'http://localhost:5050/api/words'
-const BASE_URL = 'https://dictionary-search-leeyu2523434.herokuapp.com/api/words'
+const BASE_URL = 'https://crawling-word-dic.herokuapp.com/api/words'
 
 
 // 검색어에 특수문자가 들어간 경우 검색이 안되도록 함
