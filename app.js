@@ -1,6 +1,6 @@
 const url2 = window.location.href
 const url = new URL(url2);
-const urlParams = url.searchParams;
+const urlParams = url.searchParams; 
 
 
 const selectpoint = urlParams.get('keyword')
