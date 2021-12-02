@@ -1,6 +1,6 @@
 const url2 = window.location.href
 const url = new URL(url2);
-const urlParams = url.searchParams; 
+const urlParams = url.searchParams;
 
 
 const selectpoint = urlParams.get('keyword')
@@ -14,9 +14,8 @@ console.log(seloption)
 console.log(query)
 // console.log(search)
 //    const container = document.getElementById('container')
-//    const BASE_URL = 'http://localhost:5000/api/words';
-const BASE_URL = 'http://localhost:5050/api/words'
-
+// const BASE_URL = 'http://localhost:5050/api/words'
+const BASE_URL = 'https://crawling-word-dic.herokuapp.com/api/words'
 
 
 // 검색어에 특수문자가 들어간 경우 검색이 안되도록 함
@@ -35,7 +34,7 @@ function checkIfStringHasLetters(str){
 }
 
 function checkIfStringHasNull(str){
-    return str="null";
+    return null(str);
 }
 
 // 버튼 활성화
@@ -48,17 +47,10 @@ function enableSubmitBtn(state){
 // 서버 데이터 가져오기
 function getData(baseUrl){
 
-    // if(query == undefined ||query == "undefined"){
-    //     query = "가"
-    // }
-
    // 서버 index.js 파일에 반드시 cors 옵션에 localhost:5500 주소를 허용한다고 설정해야 함
    console.log(seloption)
    console.log(query)
 //    console.log(search)
-    if(checkIfStringHasNull(query)){
-        return;
-    }
 
    if(checkIfStringHasSpecialCharacter(query)){
     enableSubmitBtn(false)//활성화
