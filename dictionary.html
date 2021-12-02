@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사전 검색 사이트</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 검색창     -->
+    <form name = "ft" method="get">
+        <div id="search-box">   
+            <select id= "keyword" name="keyword" role="search">
+                <option value="word" name="단어">단어</option>
+                <option value="des">설명</option>
+                <option value="worddes">단어+설명</option>
+            </select>
+            
+            <input id="search" type="text" value="" name="w" placeholder = "검색할 단어를 입력하세요" autofocus></input>         
+            <input id="submit" type="submit" value="검색"></input>
+
+        </div>
+    </form>
+
+
+
+    <div id="serend">
+
+    </div>
+
+
+    <!-- 사전 -->
+    <div class="back" >
+        <div id="container" style="background-image: url(123.PNG);">
+
+        </div>
+    </div>
+
+
+   <script src="app.js">
+
+   </script>
+</body>
+</html>

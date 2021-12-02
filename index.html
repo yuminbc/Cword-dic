@@ -1,6 +1,6 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
-<head>
+<head>    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,38 +8,22 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- 검색창     -->
+     <!-- 검색창      -->
+
+<div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
 
  
-   
-    <!-- <form action="/index" name="Lee" method="get"> -->
-        <div id="search-box">
-        
-                <select id= "keyword" name="keyword" role="search">
-                    <option value="r_word" >단어</option>
-                    <option value="r_des">설명</option>
-                    <option value="word_des">단어+설명</option>
-                </select>
-            
-            <input id="search" type="text" value=></input>
-            <input id="submit" type="submit" value="검색"></input>
-            <input id="allsubmit" type="button" onclick="location.href='home.html'" value="홈페이지"></input>
-
-        </div>
-    <!-- </form> -->
-    <div id="serend">
-
-    </div>
-
-
-    <!-- 사전 -->
-    <div class="back" >
-        <div id="container" style="background-image: url(123.PNG);">
-
-        </div>
-    </div>
-    <script src="app.js">
-
-    </script>
+<form method="get" action="http://127.0.0.1:5503/dictionary.html" target="_self" >    
+        <select id= "keyword" name="keyword">
+            <option value="word" >단어</option>
+            <option value="des">설명</option>
+            <option value="worddes">단어+설명</option>
+        </select>
+ 
+        <input id="search" type="text" value="" name="w" placeholder = "검색할 단어를 입력하세요"></input>
+        <input id="submit" type="submit" value="검색"></input>
+</form> 
 </body>
 </html>
