@@ -108,7 +108,7 @@ function getData(baseUrl){
                 `
                 <div class="item">
                         <div class="word">
-                            <pre><p><a href = "${word.r_link}" target="_blank">${word.r_word}</a> ${word.r_seq? word.r_seq:""}</p></pre>
+                            <pre><p><b><a href = "${word.r_link}" target="_blank">${word.r_word}</a></b> ${word.r_seq? word.r_seq:""}</p></pre>
                             <pre><a class="r_chi">${word.r_chi}</a><a class = "r_pos">${word.r_pos}</a></pre>
                         </div>
                         

@@ -1,19 +1,65 @@
 body {
     padding: 0;
     margin: 0;
-    background-color: rgb(251, 252, 248);
+    /* text-align: center; */
+    background-color: rgb(248, 250, 246);
 } 
 
+.backimage{
+    /* margin: 0 auto;
+    text-align: center; */
+    position: relative;
+    width: 100%;
+    height: 170px;
+}
+#homeimage{
+    position: absolute;
+    /* text-align: center; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    margin-left: -200px;
 
-#search-box{ 
+    background-image: url(124mainhome.jpg);
+    background-repeat: no-repeat;
+    background-size: 400px ;
+}
+#logo{
+    width: 50px;
+    float:left;
+}
+#logo img{
+    margin-left: 50px;
+    margin-top: 5px;
+    width: 100px;
+}
+
+#hsearch-box{ 
     /* width: 100%; */
     text-align: center;
     margin: 50px;
     /* background-color: rgb(252, 252, 252); */
 }
+#hsearch-box option{
+    background-color: rgb(197, 163, 117);
+    border:2px solid rgb(139, 66, 94);
+}
+
+
+#search-box{ 
+    /* width: 100%; */
+    /* text-align: center; */
+    min-width: 370px;
+    max-width: 1200px;
+    margin:50px 0px 50px 170px; /* top right bottom left*/
+ 
+    /* background-color: rgb(252, 252, 252); */
+}
 #search-box option{
-    background-color: rgb(185, 142, 85);
-    border:2px solid rgb(141, 19, 66);
+    background-color: rgb(197, 163, 117);
+    border:2px solid rgb(139, 66, 94);
 }
 #keyword{
     width: 100px;
@@ -24,28 +70,29 @@ body {
     background-color: rgb(224, 224, 224);
     cursor: pointer;
     margin-right: -6px;
-    border:2px solid rgb(148, 51, 88);
-    background-color: rgb(148, 51, 88)
+    border:3px solid rgb(148, 51, 132);
+    background-color: rgb(223, 126, 202)
 
 } 
 #search{
     all: unset; 
     width: 40%;
-    height: 50px;
+    height: 48px;
     border-radius: 0px 0px 0 0px;
     padding-left: 0px;
     text-align: left;
-    border: 2px solid rgb(224, 224, 224);
+    border: 3px solid rgb(224, 224, 224);
     color: #272523;
     background-color: rgb(224, 224, 224);
+    
 }
 #search:focus{
     background-color: white;
 }
 #submit{
     all: unset;
-    background-color: rgb(12, 100, 16);
-    border: 2px solid rgb(12, 100, 16);
+    background-color: rgb(128, 209, 132);
+    border: 3px solid rgb(12, 100, 16);
     cursor: pointer;
     width: 100px;
     height: 50px;
@@ -53,6 +100,7 @@ body {
     border-radius: 0px 30px 30px 0;
     margin-left: -6px;
     padding-left: 0;
+    
 }
 #submit:hover{
     background-color: tomato;
@@ -73,11 +121,13 @@ body {
 
 #container {
     /* background-image:url('123.PNG'); */
+    background-image: url(1234.PNG);
     margin-left: 100px;
     margin-right: 100px;
 
     columns: 1;
     margin: 50px;
+    padding: 0;
 }
 .item {
     width: 100%;
@@ -94,6 +144,7 @@ p.r_chi{
     padding-left: 20px;
 
 }
+
 
 
 /* 갤럭시 아이폰 반응형 웹 */
